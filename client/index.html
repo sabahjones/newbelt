@@ -3,20 +3,25 @@
     Entry point for client.  Requires all necessary client files.
 -->
 <!DOCTYPE html>
-<html lang="en" ng-app="itemsApp">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Items App</title>
+    <title>Ask a question!</title>
     <script src="angular/angular.js"></script>
     <script src="angular-route/angular-route.js"></script>
+
     <script src="config.js"></script>
-    <script src="factories/item.js"></script>
-    <script src="controllers/items-index.js"></script>
-    <script src="controllers/new-item.js"></script>
+
+    <script src="factories/qFactory.js"></script>
+    <script src="controllers/login.js"></script>
+    <script src="controllers/newQuestion.js"></script>
+    <script src="controllers/q_index.js"></script>
+    <script src="controllers/answers.js"></script>
+    <script src="controllers/newAnswer.js"></script>
 </head>
 <body>
 
     <div ng-view=""></div>
-    
+
 </body>
 </html>

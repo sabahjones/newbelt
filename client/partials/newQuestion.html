@@ -1,0 +1,29 @@
+<!--
+    /client/partials/new-item.html
+    View / Template for the form to create a new item
+-->
+<a href="#!/qindex">Home</a>
+
+<a href="">logout</a>
+
+<h1>New Question</h1>
+
+
+Hi {{username}}!
+
+<br><br>
+
+<form>
+<table>
+<tr>
+  <td>Question: </td>
+  <td><textarea rows="4" cols="50" ng-model="question.text"></textarea></td>
+</tr>
+<h3><i>{{validate}}</i></h3>
+<tr>
+  <td>Description: <br> (optional) </td>
+  <td><textarea rows="4" cols="50" ng-model="question.description"></textarea></td>
+</tr>
+</table>
+<input type="submit" ng-click="addQuestion()">
+</form>

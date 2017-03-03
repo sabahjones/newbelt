@@ -1,0 +1,18 @@
+
+<a href="#!/qindex">Home</a>
+|
+<a href="#!/newanswerpage/{{oneq._id}}">Answer this question!</a>
+<h2>{{oneq.text}}</h2>
+
+<i>{{oneq.description}}</i>
+
+<br><br><br>
+
+<table>
+  <tr ng-repeat='a in answers'>
+    <td><b>{{a.text}}</b> <br> {{a.description}}</td>
+    <td>{{a.likes}} likes</td>
+    <td>test id: {{a._id}}</td>
+    <td><button ng-click="addlike(a._id, $index)">like!</button></td>
+  </tr>
+</table>

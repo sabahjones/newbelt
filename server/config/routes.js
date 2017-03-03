@@ -4,11 +4,13 @@
 */
 console.log("Loaded /server/config/routes.js");
 
-var ItemsController = require("../controllers/items");
+var QuestionController = require("../controllers/questions");
 
 module.exports = function (app) {
 
-    app.get("/items", ItemsController.index)  // Controller get items
-    app.post("/items", ItemsController.create)  // Controller create items
-
+    app.get("/getquestions", QuestionController.index)  // Controller get questions
+    app.post("/addq", QuestionController.createq)  // Controller create questions
+    app.get("/oneq/:id", QuestionController.oneq) //get one question object from db
+    app.post("/adda", QuestionController.addanswer)  // Controller create questions
+    app.post('/likes', QuestionController.likes) //update like count
 };

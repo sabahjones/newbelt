@@ -1,0 +1,24 @@
+<!--
+    /client/partials/q_index.html
+    View / Template for showing all items
+-->
+
+<h1>Q Index</h1>
+
+hello {{username}}!
+<br><br>
+
+<a href="#!/addquestion">Add a new question</a>
+
+<br><br>
+
+Search: <input type="text">
+
+<br><br>
+
+<table>
+  <tr><th>Question</th><th>Answers</th><th>Action</th></tr>
+  <tr ng-repeat='q in questions'><td>{{q.text}}</td>
+    <td> 0 </td>
+    <td><a href="#!/answerpage/{{q._id}}">Show</a> | Answer </td></tr>
+</table>

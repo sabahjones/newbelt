@@ -1,0 +1,24 @@
+
+<a href="#!/qindex">Home</a>
+|
+<a href="#!/answerpage/{{oneq._id}}">Go back to Question</a>
+<h2>{{oneq.text}}</h2>
+
+<i>{{oneq.description}}</i>
+
+
+
+<form>
+<table>
+<tr>
+  <td>Your answer: </td>
+  <td><textarea rows="4" cols="50" ng-model="answer.text"></textarea></td>
+</tr>
+<h3><i>{{validate}}</i></h3>
+<tr>
+  <td>Supporting Details: <br> (optional) </td>
+  <td><textarea rows="4" cols="50" ng-model="answer.description"></textarea></td>
+</tr>
+</table>
+<input type="submit" ng-click="addAnswer(oneq._id)">
+</form>
